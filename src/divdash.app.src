@@ -1,0 +1,19 @@
+{application, divdash,
+ [{description, "divdash"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {divdash_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    mnesia,
+    cowboy,
+    jiffy,
+    decimal,
+    edate
+   ]},
+  {env,[]},
+  {modules, []},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
