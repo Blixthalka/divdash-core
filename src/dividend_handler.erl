@@ -3,7 +3,6 @@
 -export([init/2]).
 
 init(Req, State) ->
-    io:format("Request DIVIDEND"),
     case cowboy_req:method(Req) of
         <<"GET">> ->
             get(Req, State);

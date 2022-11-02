@@ -28,7 +28,7 @@ post(Req, State) ->
                 {error, wrong_credentials} ->
                     Resp = cowboy_req:reply(401, Req);
                 {ok, Session} ->
-                    io:format("Logged in\n"),
+                    io:format("Logged in ~p\n", [Email]),
                     Ejson = session:ejson(Session),
                     Json = jiffy:encode(Ejson),
                     Req1 = web:remove_cookies(Req),
